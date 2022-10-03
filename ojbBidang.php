@@ -6,7 +6,10 @@ $ar_judul = ['No','Nama Bidang','Keterangan','Luas Bidang','Keliling Bidang'];
 $L1 = new lingkaran(14);
 $P1 = new persegipanjang(5,4);
 $S1 = new segitiga(3,4);
-$Bidang = [$L1,$P1,$S1];
+$L2 = new lingkaran(16);
+$P2 = new persegipanjang(10,14);
+$S2 = new segitiga(12,13);
+$Bidang = [$L1,$P1,$S1,$S2,$P2,$L2];
 //$ket = "nama Bidang = " $Bidang->namaBidang();
 ?>
 <!doctype html>
@@ -41,7 +44,7 @@ $Bidang = [$L1,$P1,$S1];
                 <tr>
                     <td><?= $no?></td>
                     <td><?= $bd->namaBidang()?></td>
-                    <td><!--?= $ket?--></td>
+                    <td><?= $bd->keterangan()?></td>
                     <td><?= $bd->luasBidang()?></td>
                     <td><?= $bd->kelilingBidang()?></td>
                 </tr>

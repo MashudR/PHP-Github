@@ -10,10 +10,13 @@ class lingkaran extends metode{
     }
     public function luasBidang(){
         $luas = 3.14 * ($this->jari2 * $this->jari2);
-        return $luas;
+        return "$luas cm";
     }
     public function kelilingBidang(){
         $keliling = 2* 3.14 * $this->jari2;
-        return $keliling;
+        return "$keliling cm";
+    }
+    public function keterangan(){
+        echo "jari2 = $this->jari2 cm";
     }
 }
