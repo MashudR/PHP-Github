@@ -1,0 +1,32 @@
+p{
+	color:#009900;
+	text-align:justify;
+	font-family:calibri, verdana, comic sans, tahoma;
+	font-size:13pt;
+}
+body{
+	background-color:#ffff99;
+	background-image:url('images/giphy.gif');
+	background-repeat:no-repeat;
+	background-position:top right;
+	background-attachment:fixed;
+	margin:0cm 3cm;
+	background-size:100px 100px;
+}
+hr{
+	border-width:3px;
+	border-color:#990000;
+	border-style:double;
+}
+fieldset,legend{
+	border: #ff0000 ridge 7px;
+}
+legend{
+	padding:10px; /* all padding */
+	background-color:white;
+	color:blue;
+	font-size:12pt;
+	text-transform:uppercase;
+	font-family:Courier New,Lucida Console;
+	letter-spacing:1px;
+}

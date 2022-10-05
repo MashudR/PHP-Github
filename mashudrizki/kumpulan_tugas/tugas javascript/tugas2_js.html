@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head><title>Tugas Javascript</title></head>
+	<body>
+		<table align="center" border="0" cellpadding="10"
+		       width="80%">
+			<thead>
+				<tr bgcolor="tomato">
+					<th>Nama</th>
+					<th>Jabatan</th>
+					<th>Agama</th>
+					<th>Gaji Pokok</th>
+					<th>Tunjangan Jabatan</th>
+					<th>Tunjangan Kesehatan</th>
+					<th>Gaji Kotor</th>
+					<th>Zakat Profesi</th>
+					<th>Take Home Pay</th>
+				</tr>
+			</thead>
+			<tbody>
+				<script language="javascript">
+					var no, warna, jabatan, agama, gapok,
+						gator, tunjab, tunkes, zakprof, take;
+					for (no = 1; no <= 100; no++){
+						warna = (no % 2 == 0) ? 'aqua':'yellow';
+						agama = (no % 2 == 1) ? 'muslim' : 'non muslim';
+						if (no >=1 && no <= 25 ) {
+							jabatan = 'Manager'
+						}
+						else if(no >= 26 && no <=50){
+							jabatan = 'assiten manager'
+						}
+						else if (no >=51 && no <= 75){
+							jabatan = "supervisor"
+						}
+						else {
+							jabatan= "staff"
+							}
+						switch(jabatan){
+						case 'Manager': gapok = 15000000; break;
+						case 'assiten manager': gapok = 10000000; break;
+						case "supervisor": gapok = 7000000; break;
+						default: gapok =4000000;
+						}
+						tunjab = 0.2 * gapok;
+						tunkes = 0.1 * gapok;
+						gator = tunkes + tunjab + gapok;
+						zakprof = (agama == 'muslim' && gator >= 7000000) ? 0.025 * gapok : 0;
+						take = gator - zakprof ;
+						document.write(`<tr bgcolor="${warna}">
+							<td>Pegawai ${no}</td>
+							<td>${jabatan}</td>
+							<td>${agama}</td>
+							<td>${gapok}</td>
+							<td>${tunjab}</td>
+							<td>${tunkes}</td>
+							<td>${gator}</td>
+							<td>${zakprof}</td>
+							<td>${take}</td>
+						</tr>`);
+					}
+				</script>
+			</tbody>
+		</table>
+	</body>
+</html>

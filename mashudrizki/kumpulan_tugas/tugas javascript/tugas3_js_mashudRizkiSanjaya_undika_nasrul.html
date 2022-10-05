@@ -1,0 +1,75 @@
+	<script language="javascript">
+		let m1 = {name:"budi", nilai:75};
+		let m2 = {name:"bedu", nilai:55};
+		let m3 = {name:"dedi", nilai:95};
+		let m4 = {name:"dudi", nilai:88};
+		let m5 = {name:"deden", nilai:25};
+		let m6 = {name:"desi", nilai:65};
+		let m7 = {name:"dadang", nilai:24};
+		
+		let mahasiswa = [m1, m2, m3, m4, m5, m6, m7];
+		/*
+		for (let m of mahasiswa){
+			let ket = (m.nilai >=60 ? "lulus" : "gagal")
+			document.write(`<br/>Nama : ${m.name} - Nilai : ${m.nilai}	keterangan : ${ket}`);
+		}
+		*/
+	</script>
+		<h3 align="center">Daftar Nilai</h3>
+		<table align="center" border="1" cellpadding="10" >
+			<thead>
+				<tr bgcolor="tomato">
+					<th>NO</th>
+					<th>NAMA</th>
+					<th>NILAI</th>
+					<th>KETERANGAN</th>
+					<th>GRADE</th>
+					<th>PREDIKAT</th>
+				</tr>
+			</thead>
+			<tbody>
+				<script language="javascript">
+					let no = 1;
+					var grade, predikat, warna;
+					for (m of mahasiswa){
+					// ket lulus
+					let ket = (m.nilai >=60 ? "lulus" : "gagal")
+					let warna = (no %2 ==0 ? "aqua" : "blue")
+					// set grade A - E (if multi kondisi)
+					// A = 100-81, B =68-80,C=41-67,D=25-40 ,E=0-24
+					
+					if (m.nilai<=100 && m.nilai>=81){
+						grade ='A'
+					}
+					else if (m.nilai<=80 && m.nilai>=68){
+						grade ='B'
+					}else if (m.nilai<=67 && m.nilai>=41){
+						grade ='C'
+					}else if (m.nilai<=40 && m.nilai>=25){
+						grade ='D'
+					}
+					else{
+						grade="E"
+					}
+					// set predikat switch case
+					// A= memuaskan, B= bagus, C= Cukup, D=kurang, 
+					// E=berusaha lagi
+					switch (grade){
+						case 'A': predikat="Memuaskan"; break;
+						case 'B': predikat="Bagus"; break;
+						case 'C': predikat="Cukup"; break;
+						case 'D': predikat="Kurang"; break;
+						default: predikat="Berusaha lagi";
+					}
+					// ganjil genap warna warni
+					document.write(`<tr bgcolor= "${warna}">
+						<td>${no++}</td>
+						<td>${m.name}</td>
+						<td>${m.nilai}</td>
+						<td>${ket}</td>
+						<td>${grade}</td>
+						<td>${predikat}</td>
+					</tr>`)};
+				</script>
+			</tbody>
+		</table>

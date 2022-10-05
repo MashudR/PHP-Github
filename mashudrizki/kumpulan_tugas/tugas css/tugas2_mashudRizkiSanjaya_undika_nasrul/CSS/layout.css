@@ -1,0 +1,64 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	margin:0;
+}
+.header{
+	background-image:url('../images/IOT.jpg');
+	background-repeat:no-repeat;
+	background-position: right;
+	padding:20px;
+	text-align:left;
+	background-size:348px 145px;
+	background-color:#0099ff;
+}
+.header h1{
+	color:#000000;
+}
+.header p{
+	color:#000000;
+}
+.topnav {
+	overflow: hidden;
+	background-color: #ff0000;
+}
+.topnav a{
+	float: left;
+	display: block;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+.topnav a:hover {
+  background-color: #ffffff;
+  color: black;
+}
+.column {
+  float: left;
+  padding: 10px;
+}
+.column.side {
+  width: 25%;
+}
+.column.middle {
+  width: 50%;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media screen and (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
+}
+
+.footer {
+  background-color: #99ff99;
+  padding: 10px;
+  text-align: center;
+  font-size:16pt;
+}
